@@ -1,0 +1,22 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "build",
+    "public"
+  ],
+  "verbose": true,
+  "execMap": {
+    "ts": "tsx"
+  },
+  "watch": [
+    "src/"
+  ],
+  "events": {
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,json,ts"
+}

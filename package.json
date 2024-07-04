@@ -1,0 +1,33 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "prestart": "npm run build && npm run fix-import",
+    "start": "node ./build/main.js",
+    "build": "rimraf build && tsc -p . && shx cp -r ./src/db/certificate ./build/db",
+    "fix-import": "fix-esm-import-path build",
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "pg": "^8.8.0",
+    "rickmortyapi": "^2.3.0",
+    "sequelize": "^6.37.3",
+    "sequelize-typescript": "^2.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "@types/pg": "^8.6.5",
+    "fix-esm-import-path": "^1.10.0",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.7",
+    "shx": "^0.3.4",
+    "tsx": "^4.10.0",
+    "typescript": "^5.4.5"
+  }
+}
